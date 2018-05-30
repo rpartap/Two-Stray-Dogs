@@ -1,0 +1,197 @@
+/*universal*/
+
+* {
+	font-size: 16px;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	color: snow;
+}
+
+header, section {
+	height: 700px;
+}
+
+h2 {
+	font-size: 3rem;
+	text-align: center;
+	padding-top: 10px;
+	color: snow;
+}
+
+/*grid*/
+
+
+
+/*navigation*/
+
+.top-navigation {
+	display: flex;
+	text-decoration: none;
+	justify-content: center;
+	background-color: midnightblue;
+	color: white;
+	z-index: 100;
+	width: 1567px;
+	position: fixed;
+	top: 0;
+}
+
+.top-navigation ul {
+	display: flex;
+	list-style-type: none;
+	flex-direction: row;
+}
+
+.top-navigation li {
+	padding: 1rem;
+	font-size: 1.5rem;
+}
+
+/*header*/
+
+header {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-color: lightblue;
+	background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  height: 700px;
+  width: 100%;
+	margin-top: 60px;
+}
+
+header img {
+	width: 30%;
+	justify-content: center;
+}
+
+h1 {
+	font-size: 5rem;
+	justify-content: center;
+	color: black;
+	padding-top: 20px;
+}
+
+/*aboutus*/
+
+#aboutus {
+	background-color: darkcyan;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+	height: 800px;
+	width: 100%;
+	margin-top: -40px;
+}
+
+
+/*inspiration*/
+
+#inspiration {
+	background-color: cornflowerblue;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+	height: 800px;
+	width: 100%;
+	margin-top: -40px;
+	display: flex;
+	flex-direction: column;
+}
+
+.dogpics {
+	display: flex;
+	width: 50%;
+}
+
+#inspiration .container {
+	display: flex;
+}
+
+.story {
+	text-align: center;
+	width: 50%;
+}
+
+.karmapic, .juleppic {
+	margin: 40px;
+}
+/*ingredients*/
+
+#ingredients {
+	background-color: darkslateblue;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+	height: 800px;
+	width: 100%;
+	margin-top: -40px;
+}
+
+.ingredients {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+
+.description {
+	text-align: center;
+}
+
+article {
+	text-align: center;
+}
+
+aside .image-container {
+	width: 200px;
+	height: 200px;
+	margin: 40px;
+}
+
+
+/*products*/
+
+#products {
+	background-color: dodgerblue;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+	height: 800px;
+	width: 100%;
+	margin-top: -40px;
+}
+
+.cats {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+
+.cats .image-container {
+	width: 200px;
+	height: 200px;
+	margin: 40px;
+}
+
+/*contactus*/
+
+#contactus {
+	background-color: lightslategray;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+	height: 800px;
+	width: 100%;
+	margin-top: -40px;
+}
