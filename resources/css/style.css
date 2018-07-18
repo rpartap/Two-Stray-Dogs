@@ -21,6 +21,7 @@ h2 {
 	color: snow;
 }
 
+
 /*grid*/
 
 
@@ -34,8 +35,7 @@ h2 {
 	background-color: midnightblue;
 	color: white;
 	z-index: 100;
-	width: 1567px;
-	position: fixed;
+	position: relative;
 	top: 0;
 }
 
@@ -61,9 +61,9 @@ header {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
-  height: 700px;
+  height: 1000px;
   width: 100%;
-	margin-top: 60px;
+	/*margin-top: 60px;*/
 }
 
 header img {
@@ -81,12 +81,15 @@ h1 {
 /*aboutus*/
 
 #aboutus {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
 	background-color: darkcyan;
 	background-position: center center;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	background-size: cover;
-	height: 800px;
+	height: 1000px;
 	width: 100%;
 	margin-top: -40px;
 }
@@ -95,6 +98,9 @@ h1 {
 /*inspiration*/
 
 #inspiration {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
 	background-color: cornflowerblue;
 	background-position: center center;
 	background-repeat: no-repeat;
@@ -114,6 +120,7 @@ h1 {
 
 #inspiration .container {
 	display: flex;
+	/*flex-direction: column;*/ /*use a media query*/
 }
 
 .story {
@@ -132,7 +139,7 @@ h1 {
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	background-size: cover;
-	height: 800px;
+	height: auto;
 	width: 100%;
 	margin-top: -40px;
 }
@@ -166,7 +173,7 @@ aside .image-container {
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	background-size: cover;
-	height: 800px;
+	height: auto;
 	width: 100%;
 	margin-top: -40px;
 }
@@ -191,7 +198,7 @@ aside .image-container {
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	background-size: cover;
-	height: 800px;
+	height: auto;
 	width: 100%;
 	margin-top: -40px;
 }
