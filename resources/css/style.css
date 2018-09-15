@@ -1,34 +1,110 @@
 /*universal*/
 
 * {
-	font-size: 16px;
+	font-size: 18px;
 }
 
 body {
-	display: flex;
-	flex-direction: column;
+	display: grid;
 	color: snow;
 }
 
-header, section {
-	height: 700px;
+header {
+	height: 1000px;
+}
+
+section {
+	height: 1100px;
 }
 
 h2 {
 	font-size: 3rem;
-	text-align: center;
-	padding-top: 10px;
 	color: snow;
+}
+
+h3 {
+	font-size: 2rem;
 }
 
 
 /*grid*/
 
 
+.body-container {
+	height: 100%;
+	display: grid;
+	grid-template-columns: repeat(6, 1fr);
+	grid-template-columns: repeat(6, 1fr);
+	grid-gap: 10px;
+	grid-template-areas:
+			'n n n n n n'
+			'h h h h h h'
+			'm m m m m m'
+			'm m m m m m'
+			'm m m m m m'
+			'f f f f f f'
+}
+
+.navigation {
+	grid-area: n;
+}
+
+.headercontainer {
+	grid-area: h;
+}
+
+.maincontent {
+	grid area: m;
+}
+
+.#aboutus {
+
+}
+
+#inspiration {
+
+}
+
+.dogpics {
+
+}
+
+.story {
+
+}
+
+#ingredients {
+
+}
+
+.ingredientslist {
+
+}
+
+.products {
+
+}
+
+.contactus {
+
+}
+
+.footer {
+	grid-area: f;
+}
+
+.header-container {
+	height: 100%;
+	display: grid;
+	grid-template-columns: repeat(6, 1fr);
+	grid-template-columns: repeat(6, 1fr);
+	grid-gap: 10px;
+}
+
 
 /*navigation*/
 
-.top-navigation {
+.navigation {
 	display: flex;
 	text-decoration: none;
 	justify-content: center;
@@ -39,13 +115,13 @@ h2 {
 	top: 0;
 }
 
-.top-navigation ul {
+.navigation ul {
 	display: flex;
 	list-style-type: none;
 	flex-direction: row;
 }
 
-.top-navigation li {
+.navigation li {
 	padding: 1rem;
 	font-size: 1.5rem;
 }
@@ -53,29 +129,35 @@ h2 {
 /*header*/
 
 header {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
 	background-color: lightblue;
 	background-position: center center;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
-  height: 1000px;
   width: 100%;
+	grid-column: 1 / span 4;
+	grid-row: 1 / span 4;
 	/*margin-top: 60px;*/
 }
 
 header img {
 	width: 30%;
-	justify-content: center;
+	grid-column: 2 / span 2;
+	grid-row: 2 / span 2;
 }
 
-h1 {
+.top {
 	font-size: 5rem;
-	justify-content: center;
 	color: black;
-	padding-top: 20px;
+	grid-column: 1 / span 4;
+	grid-row: 1 / span 1;
+}
+
+.bottom {
+	font-size: 5rem;
+	color: black;
+	grid-column: 1 / span 4;
+	grid-row: 3 / span 1;
 }
 
 /*aboutus*/
@@ -89,7 +171,6 @@ h1 {
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	background-size: cover;
-	height: 1000px;
 	width: 100%;
 	margin-top: -40px;
 }
@@ -106,7 +187,6 @@ h1 {
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	background-size: cover;
-	height: 800px;
 	width: 100%;
 	margin-top: -40px;
 	display: flex;
@@ -139,9 +219,8 @@ h1 {
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	background-size: cover;
-	height: auto;
 	width: 100%;
-	margin-top: -40px;
+	margin-top: -50px;
 }
 
 .ingredients {
@@ -173,9 +252,8 @@ aside .image-container {
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	background-size: cover;
-	height: auto;
 	width: 100%;
-	margin-top: -40px;
+	margin-top: -50px;
 }
 
 .cats {
@@ -200,5 +278,11 @@ aside .image-container {
 	background-size: cover;
 	height: auto;
 	width: 100%;
-	margin-top: -40px;
+	margin-top: -50px;
+}
+
+/*footer*/
+
+footer {
+	color: black;
 }
