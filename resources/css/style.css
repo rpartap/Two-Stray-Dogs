@@ -273,9 +273,7 @@ header img {
 	grid-gap: 10px;
 	grid-template-areas:
 			'igd igd igd igd'
-			'ty ty ty ty'
-			'nl nl nl nl'
-			'nl nl nl nl';
+			'ty ty ty ty';
 
 	background-color: darkslateblue;
 	background-position: center center;
@@ -288,7 +286,7 @@ header img {
 .title3 {
 	grid-area: igd;
 	grid-column: 2 / 4;
-	justify-self: center;
+		justify-self: center;
 }
 
 .types {
@@ -300,72 +298,65 @@ header img {
 /*ingredients list*/
 
 .ingredientslist {
-	display: flex;
-	flex-wrap: wrap;
+	/*display: flex;
+	flex-wrap: wrap;*/
 	grid-column: 1 / -1;
 
 	/*grid-column: 1 / -1;*/
 }
 
-/*.nestedlist {
+.nestedlist {
 	grid-area: nl;
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
+	/*grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));*/
 	grid-template-rows: repeat(2, auto);
-	grid-gap: 10px;
+	grid-gap: 20px;
 	grid-template-areas:
 			'ck ri ca po'
 			'li be be .';
-
 	background-color: darkslateblue;
 	background-position: center center;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	background-size: cover;
 	width: 100%;
-}*/
+}
 
 .chicken-container {
-	/*grid-area: ck;
-	justify-self: center;*/
+	grid-area: ck;
 	padding: 20px;
 }
 
 .rice-container {
-	/*grid-area: ri;
-	justify-self: center;*/
+	grid-area: ri;
 	padding: 20px;
 }
 
 .carrot-container {
-	/*grid-area: ca;
-	justify-self: center;*/
+	grid-area: ca;
 	padding: 20px;
 }
 
 .potatoes-container {
-	/*grid-area: po;
-	justify-self: center;*/
+	grid-area: po;
 	padding: 20px;
 }
 
 .liver-container {
-	/*grid-area: li;
-	justify-self: center;*/
+	grid-area: li;
 	padding: 20px;
 }
 
 .bean-container {
-	/*grid-area: be;
-	justify-self: center;*/
+	grid-area: be;
 	padding: 20px;
 }
 
 .beef-container {
-	/*grid-area: bf;
-	justify-self: center;*/
+	grid-area: bf;
 	padding: 20px;
-}
+}*/
 
 .image-container {
 	justify-content: center;
@@ -383,7 +374,7 @@ article {
 	text-align: center;
 }
 
-aside .image-container {
+figure .image-container {
 	width: 200px;
 	height: 200px;
 
