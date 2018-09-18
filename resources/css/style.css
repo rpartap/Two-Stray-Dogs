@@ -5,16 +5,15 @@
 }
 
 body {
-	display: grid;
 	color: snow;
 }
 
 header {
-	height: 1000px;
+
 }
 
 section {
-	height: 1100px;
+
 }
 
 h2 {
@@ -24,81 +23,82 @@ h2 {
 
 h3 {
 	font-size: 2rem;
+	color: snow;
 }
 
 
-/*grid*/
+/*body grid*/
 
 
-.body-container {
+.bodycontainer {
 	height: 100%;
 	display: grid;
 	grid-template-columns: repeat(6, 1fr);
-	grid-template-columns: repeat(6, 1fr);
-	grid-gap: 10px;
+	grid-template-rows: 100px, repeat(10, 1fr), 100px;
 	grid-template-areas:
 			'n n n n n n'
 			'h h h h h h'
+			'a a a a a a'
+			'in in in in in in'
+			'ig ig ig ig ig ig'
 			'm m m m m m'
 			'm m m m m m'
 			'm m m m m m'
-			'f f f f f f'
+			'm m m m m m'
+			'm m m m m m'
+			'm m m m m m'
+			'f f f f f f';
+
 }
 
 .navigation {
 	grid-area: n;
+	grid-column: 1 / -1;
 }
 
 .headercontainer {
 	grid-area: h;
+	grid-column: 1 / -1;
 }
 
 .maincontent {
 	grid area: m;
+	grid-column: 1 / -1;
 }
 
-.#aboutus {
-
+#aboutus {
+	grid-area: a;
+	grid-column: 1 / -1;
 }
 
 #inspiration {
-
-}
-
-.dogpics {
-
-}
-
-.story {
-
+	grid-area: in;
+	grid-column: 1 / -1;
 }
 
 #ingredients {
-
+	grid-area: ig;
+	grid-column: 1 / -1;
 }
 
-.ingredientslist {
-
-}
+/*.ingredientslist {
+	grid-area: inl;
+}*/
 
 .products {
-
+	grid-area: p;
 }
 
 .contactus {
-
+	grid-area: cu;
 }
 
 .footer {
 	grid-area: f;
-}
-
-.header-container {
-	height: 100%;
-	display: grid;
-	grid-template-columns: repeat(6, 1fr);
-	grid-template-columns: repeat(6, 1fr);
-	grid-gap: 10px;
+	grid-column: 1 / -1;
+	background-color: purple;
+	color: black;
+	justify-self: stretch;
 }
 
 
@@ -126,86 +126,137 @@ h3 {
 	font-size: 1.5rem;
 }
 
-/*header*/
+/*header grid*/
 
-header {
+.nestedhead {
+	height: 100%;
+	display: grid;
+	grid-column: 1 / -1;
+	grid-template-columns: repeat(4, 1fr);
+	grid-template-rows: repeat(4, 1fr);
+	grid-gap: 10px;
+	grid-template-areas:
+			't t t t'
+			'. i i .'
+			'. i i .'
+			'b b b b';
 	background-color: lightblue;
 	background-position: center center;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
   width: 100%;
-	grid-column: 1 / span 4;
-	grid-row: 1 / span 4;
-	/*margin-top: 60px;*/
+	justify-items: center;
 }
 
 header img {
-	width: 30%;
-	grid-column: 2 / span 2;
-	grid-row: 2 / span 2;
+	grid-area: i;
+	justify-self: center;
+	align-self: center;
 }
 
 .top {
+	grid-area: t;
 	font-size: 5rem;
 	color: black;
-	grid-column: 1 / span 4;
-	grid-row: 1 / span 1;
+	justify-self: center;
+	align-self: center;
 }
 
 .bottom {
+	grid-area: b;
 	font-size: 5rem;
 	color: black;
-	grid-column: 1 / span 4;
-	grid-row: 3 / span 1;
+	justify-self: center;
+	align-self: center;
 }
 
 /*aboutus*/
 
-#aboutus {
-	display: flex;
-	flex-wrap: wrap;
+.nestedabout {
+	height: 100%;
+	display: grid;
+	grid-column: 1 / -1;
+	grid-template-columns: repeat(4, 1fr);
+	grid-template-rows: repeat(3, auto);
+	grid-gap: 10px;
+	grid-template-areas:
+			'. au au .'
+			'o o . .'
+			'. . mi mi';
+
+	justify-self: center;
+	align-self: center;
 	justify-content: space-around;
 	background-color: darkcyan;
 	background-position: center center;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	background-size: cover;
-	width: 100%;
-	margin-top: -40px;
 }
 
 
+.title1 {
+	grid-area: au;
+	justify-self: center;
+	align-self: top;
+	grid-columns: 2 / 4;
+}
+
+.owned {
+	grid-area: o;
+	justify-self: center;
+	align-self: top;
+	padding: 20px;
+}
+
+.mission {
+	grid-area: mi;
+	justify-self: center;
+	align-self: top;
+	padding: 20px;
+}
+
 /*inspiration*/
 
-#inspiration {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-around;
+.nestedinspire {
+	height: 100%;
+	display: grid;
+	grid-column: 1 / -1;
+	grid-template-columns: repeat(4, 1fr);
+	grid-template-rows: repeat(2, auto);
+	grid-gap: 10px;
+	grid-template-areas:
+			'. ins ins .'
+			'd d s s';
+
 	background-color: cornflowerblue;
 	background-position: center center;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	background-size: cover;
 	width: 100%;
-	margin-top: -40px;
-	display: flex;
-	flex-direction: column;
+	/*display: flex;
+	flex-direction: column;*/
+}
+
+.title2 {
+	grid-area: ins;
+	justify-self: center;
+	align-self: top;
+	grid-columns: 2 / 4;
 }
 
 .dogpics {
+	grid-area: d;
 	display: flex;
-	width: 50%;
-}
-
-#inspiration .container {
-	display: flex;
-	/*flex-direction: column;*/ /*use a media query*/
 }
 
 .story {
-	text-align: center;
-	width: 50%;
+	grid-area: s;
+	padding: 20px;
+	/*text-align: center;
+	width: 50%;*/
 }
 
 .karmapic, .juleppic {
@@ -213,20 +264,115 @@ header img {
 }
 /*ingredients*/
 
-#ingredients {
+.nestedingredients {
+	height: 100%;
+	display: grid;
+	grid-column: 1 / -1;
+	grid-template-columns: repeat(4, 1fr);
+	grid-template-rows: repeat(2, auto);
+	grid-gap: 10px;
+	grid-template-areas:
+			'igd igd igd igd'
+			'ty ty ty ty'
+			'nl nl nl nl'
+			'nl nl nl nl';
+
 	background-color: darkslateblue;
 	background-position: center center;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	background-size: cover;
 	width: 100%;
-	margin-top: -50px;
 }
 
-.ingredients {
+.title3 {
+	grid-area: igd;
+	grid-column: 2 / 4;
+	justify-self: center;
+}
+
+.types {
+	grid-area: ty;
+	grid-column: 2 / 4;
+	justify-self: center;
+}
+
+/*ingredients list*/
+
+.ingredientslist {
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: space-around;
+	grid-column: 1 / -1;
+
+	/*grid-column: 1 / -1;*/
+}
+
+/*.nestedlist {
+	grid-area: nl;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-template-rows: repeat(2, auto);
+	grid-gap: 10px;
+	grid-template-areas:
+			'ck ri ca po'
+			'li be be .';
+
+	background-color: darkslateblue;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+	width: 100%;
+}*/
+
+.chicken-container {
+	/*grid-area: ck;
+	justify-self: center;*/
+	padding: 20px;
+}
+
+.rice-container {
+	/*grid-area: ri;
+	justify-self: center;*/
+	padding: 20px;
+}
+
+.carrot-container {
+	/*grid-area: ca;
+	justify-self: center;*/
+	padding: 20px;
+}
+
+.potatoes-container {
+	/*grid-area: po;
+	justify-self: center;*/
+	padding: 20px;
+}
+
+.liver-container {
+	/*grid-area: li;
+	justify-self: center;*/
+	padding: 20px;
+}
+
+.bean-container {
+	/*grid-area: be;
+	justify-self: center;*/
+	padding: 20px;
+}
+
+.beef-container {
+	/*grid-area: bf;
+	justify-self: center;*/
+	padding: 20px;
+}
+
+.image-container {
+	justify-content: center;
+}
+
+.image {
+	align-self: center;
 }
 
 .description {
@@ -240,7 +386,7 @@ article {
 aside .image-container {
 	width: 200px;
 	height: 200px;
-	margin: 40px;
+
 }
 
 
@@ -282,7 +428,6 @@ aside .image-container {
 }
 
 /*footer*/
+.footer p {
 
-footer {
-	color: black;
 }
