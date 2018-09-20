@@ -34,19 +34,15 @@ h3 {
 	height: 100%;
 	display: grid;
 	grid-template-columns: repeat(6, 1fr);
-	grid-template-rows: 100px, repeat(10, 1fr), 100px;
+	grid-template-rows: 100px, repeat(8, 1fr), 100px;
 	grid-template-areas:
 			'n n n n n n'
 			'h h h h h h'
 			'a a a a a a'
 			'in in in in in in'
 			'ig ig ig ig ig ig'
-			'm m m m m m'
-			'm m m m m m'
-			'm m m m m m'
-			'm m m m m m'
-			'm m m m m m'
-			'm m m m m m'
+			'p p p p p p'
+			'cu cu cu cu cu cu'
 			'f f f f f f';
 
 }
@@ -184,7 +180,6 @@ header img {
 			'. au au .'
 			'o o . .'
 			'. . mi mi';
-
 	justify-self: center;
 	align-self: center;
 	justify-content: space-around;
@@ -229,7 +224,6 @@ header img {
 	grid-template-areas:
 			'. ins ins .'
 			'd d s s';
-
 	background-color: cornflowerblue;
 	background-position: center center;
 	background-repeat: no-repeat;
@@ -262,19 +256,20 @@ header img {
 .karmapic, .juleppic {
 	margin: 40px;
 }
-/*ingredients*/
+/*ingredients intro*/
 
 .nestedingredients {
 	height: 100%;
 	display: grid;
 	grid-column: 1 / -1;
 	grid-template-columns: repeat(4, 1fr);
-	grid-template-rows: repeat(2, auto);
+	grid-template-rows: repeat(4, auto);
 	grid-gap: 10px;
 	grid-template-areas:
-			'igd igd igd igd'
-			'ty ty ty ty';
-
+			'. igd igd .'
+			'. ty ty .'
+			'nl nl nl nl'
+			'nl nl nl nl';
 	background-color: darkslateblue;
 	background-position: center center;
 	background-repeat: no-repeat;
@@ -285,89 +280,96 @@ header img {
 
 .title3 {
 	grid-area: igd;
-	grid-column: 2 / 4;
-		justify-self: center;
+	/*grid-column: 2 / 4;*/
+	justify-self: center;
 }
 
 .types {
 	grid-area: ty;
-	grid-column: 2 / 4;
+/*	grid-column: 2 / 4;*/
 	justify-self: center;
 }
 
 /*ingredients list*/
 
-.ingredientslist {
-	/*display: flex;
-	flex-wrap: wrap;*/
+/*.ingredientslist {
+	display: flex;
+	flex-wrap: wrap;
+
 	grid-column: 1 / -1;
 
-	/*grid-column: 1 / -1;*/
-}
+	/*grid-column: 1 / -1;
+}*/
 
-.nestedlist {
-	grid-area: nl;
-	display: grid;
-	grid-template-columns: repeat(4, 1fr);
-	/*grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));*/
-	grid-template-rows: repeat(2, auto);
-	grid-gap: 20px;
-	grid-template-areas:
-			'ck ri ca po'
-			'li be be .';
+.ingredientslist {
 	background-color: darkslateblue;
 	background-position: center center;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	background-size: cover;
 	width: 100%;
+	grid-area: nl;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-gap: 10px;
+	grid-template-areas:
+			'ck ri ca po'
+			'li be bf .';
 }
 
 .chicken-container {
 	grid-area: ck;
 	padding: 20px;
+	justify-self: center;
 }
 
 .rice-container {
 	grid-area: ri;
 	padding: 20px;
+	justify-self: center;
 }
 
 .carrot-container {
 	grid-area: ca;
 	padding: 20px;
+	justify-self: center;
 }
 
 .potatoes-container {
 	grid-area: po;
 	padding: 20px;
+	justify-self: center;
 }
 
 .liver-container {
 	grid-area: li;
 	padding: 20px;
+	justify-self: center;
 }
 
 .bean-container {
 	grid-area: be;
 	padding: 20px;
+	justify-self: center;
 }
 
 .beef-container {
 	grid-area: bf;
 	padding: 20px;
-}*/
+	justify-self: center;
+}
 
 .image-container {
 	justify-content: center;
 }
 
 .image {
-	align-self: center;
+	justify-content: center;
 }
 
-.description {
+h3 {
 	text-align: center;
+	justify-self: center;
 }
 
 article {
@@ -384,25 +386,61 @@ figure .image-container {
 /*products*/
 
 #products {
+	height: 100%;
+	display: grid;
+	grid-column: 1 / -1;
+	grid-template-columns: repeat(4, 1fr);
+	grid-template-rows: repeat(3, 1fr);
+	grid-gap: 10px;
+	grid-template-areas:
+			'. ph ph .'
+			'pd pd pd pd'
+			'g to j nt';
 	background-color: dodgerblue;
 	background-position: center center;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	background-size: cover;
 	width: 100%;
-	margin-top: -50px;
 }
 
-.cats {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-around;
+.product-head {
+	grid-area: ph;
+	justify-content: center;
 }
 
-.cats .image-container {
+.prod-descript {
+	grid-area: pd;
+	justify-content: center;
+}
+
+.ghost-image {
+	grid-area: g;
+	padding: 20px;
+	justify-self: center;
+}
+
+.toby-image {
+	grid-area: to;
+	padding: 20px;
+	justify-self: center;
+}
+
+.jasmine-image {
+	grid-area: j;
+	padding: 20px;
+	justify-self: center;
+}
+
+.nettle-image {
+	grid-area: nt;
+	padding: 20px;
+	justify-self: center;
+}
+
+.image-container {
 	width: 200px;
 	height: 200px;
-	margin: 40px;
 }
 
 /*contactus*/
