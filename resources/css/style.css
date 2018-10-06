@@ -443,9 +443,23 @@ figure .image-container {
 	height: 200px;
 }
 
+#products h3 {
+	text-align: center;
+}
+
 /*contactus*/
 
 #contactus {
+	height: 100%;
+	display: grid;
+	grid-column: 1 / -1;
+	grid-template-columns: repeat(4, 1fr);
+	grid-template-rows: repeat(3, 1fr);
+	grid-gap: 10px;
+	grid-template-areas:
+			'. cut cut .'
+			'fac twt adr pho'
+			'fbs tws ads phs';
 	background-color: lightslategray;
 	background-position: center center;
 	background-repeat: no-repeat;
@@ -453,8 +467,48 @@ figure .image-container {
 	background-size: cover;
 	height: auto;
 	width: 100%;
-	margin-top: -50px;
 }
+
+.cutitle {
+	grid-area: cut;
+}
+
+.facebook {
+ grid-area: fac;
+}
+
+.fbsite {
+ grid-area: fbs;
+}
+
+.twitter {
+ grid-area: twt;
+}
+
+.twsite {
+	grid-area: tws;
+}
+
+.address {
+	grid-area: adr;
+}
+
+.adsite {
+ grid-area: ads;
+}
+
+.phone {
+	grid-area: pho;
+}
+
+.phsite {
+ grid-area: phs;
+}
+
+#contactus p {
+	text-align: center;
+}
+
 
 /*footer*/
 .footer p {
